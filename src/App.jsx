@@ -5,9 +5,11 @@ import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 export default function App() {
   return (
+    <>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,5 +20,7 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
+    <SpeedInsights />
+    </>
   );
 }
