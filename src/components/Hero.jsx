@@ -9,7 +9,8 @@ export default function Hero() {
         >
       <div className="hero__content">
         <h1>Learn French with Confidence</h1>
-        <p>Join the 120 million people worldwide who learn French every day. At Topfrançais, we empower you to achieve fluency in French, unlocking new opportunities and connections.</p>
+        <p>Join the 120 million people worldwide who learn French every day.</p> 
+        <p>At Topfrançais, we empower you to achieve fluency in French, unlocking new opportunities and connections.</p>
         <Link to="/courses" className="btn">Get Started</Link>
       </div>
     </section>

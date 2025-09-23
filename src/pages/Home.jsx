@@ -8,6 +8,7 @@ import FAQ from "../components/FAQ";
 import Popup from "../components/PopUp";
 import Stats from "../components/Stats";
 import WelcomeVideo from "../components/WelcomeVideo";
+import Bootcamp from "../components/Bootcamp";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <WelcomeVideo />
       <Pricing />
       <Testimonials />
+      <Bootcamp />
       <FAQ />
       <Footer />
     </>

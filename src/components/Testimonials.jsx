@@ -32,19 +32,40 @@ const Testimonials = () => {
   const containerRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Auto-scroll carousel on mobile
+  // Auto-scroll carousel on mobile without jumping the page
   useEffect(() => {
     const interval = setInterval(() => {
       if (!containerRef.current) return;
 
-      const cards = containerRef.current.children;
-      const nextIndex = (activeIndex + 1) % cards.length;
-      cards[nextIndex].scrollIntoView({ behavior: "smooth", inline: "start" });
+      const container = containerRef.current;
+      const gap = parseInt(getComputedStyle(container).gap) || 16;
+      const cardWidth = container.children[0].offsetWidth + gap;
+      const nextIndex = (activeIndex + 1) % container.children.length;
+
+      container.scrollTo({
+        left: nextIndex * cardWidth,
+        behavior: "smooth",
+      });
+
       setActiveIndex(nextIndex);
-    }, 5000); // scroll every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [activeIndex]);
+
+  const handleDotClick = (idx) => {
+    if (!containerRef.current) return;
+    const container = containerRef.current;
+    const gap = parseInt(getComputedStyle(container).gap) || 16;
+    const cardWidth = container.children[0].offsetWidth + gap;
+
+    container.scrollTo({
+      left: idx * cardWidth,
+      behavior: "smooth",
+    });
+
+    setActiveIndex(idx);
+  };
 
   return (
     <section className="testimonials" id="testimonials">
@@ -73,10 +94,7 @@ const Testimonials = () => {
             <span
               key={idx}
               className={`dot ${idx === activeIndex ? "active" : ""}`}
-              onClick={() => {
-                containerRef.current.children[idx].scrollIntoView({ behavior: "smooth", inline: "start" });
-                setActiveIndex(idx);
-              }}
+              onClick={() => handleDotClick(idx)}
             ></span>
           ))}
         </div>

@@ -1,3 +1,4 @@
+// src/components/Bootcamp.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Bootcamp.scss";
@@ -5,12 +6,15 @@ import "./Bootcamp.scss";
 export default function Bootcamp() {
   return (
     <section className="bootcamp">
-      <div className="bootcamp__content">
-        <h2>Topfrançais Summer Bootcamp</h2>
-        <p>
-          Don't miss out on our Summer Bootcamp! Join the training now and accelerate your French fluency!
+      <div className="bootcamp__container">
+        <h2 className="animate">Topfrançais Summer Bootcamp</h2>
+        <p className="bootcamp__description animate">
+          Don't miss out on our Summer Bootcamp! Join the training now and accelerate your French fluency.
         </p>
-        <Link to="/courses" className="btn">Join Now</Link>
+        <span className="bootcamp__price animate">$199</span>
+        <Link to="/courses" className="btn bootcamp__btn animate">
+          Join Now
+        </Link>
       </div>
     </section>
   );
