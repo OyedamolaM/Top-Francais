@@ -1,6 +1,6 @@
 // src/components/Popup.jsx
 import { useState, useEffect } from "react";
-import "./PopUp.scss";
+import "./Popup.scss";
 
 export default function Popup({ delay =10000 }) {
   const [isOpen, setIsOpen] = useState(false);
