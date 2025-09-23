@@ -13,6 +13,8 @@ import WhyChoose from "../components/WhyChoose";
 import AboutUs from "../components/AboutUs";
 import CourseSubscriptionPricing from "../components/CourseSubscriptionPricing";
 import Community from "../components/Community";
+import Resources from "../components/Resources";
+import ContactUs from "../components/ContactUs";
 
 export default function Home() {
   return (
@@ -28,9 +30,11 @@ export default function Home() {
       <Bootcamp />
       <WhyChoose />
       <Community />
+      <Resources />
       <Newsletter />
       <AboutUs />
       <FAQ />
+      <ContactUs />
       <Footer />
     </>
   );
