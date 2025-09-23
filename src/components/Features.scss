@@ -7,6 +7,10 @@
     font-size: 2rem;
     margin-bottom: 2rem;
     color: #2c3e50;
+
+    @media (max-width: 768px) {
+      font-size: 1.6rem;
+    }
   }
 
   &__grid {
@@ -15,6 +19,10 @@
     gap: 2rem;
     max-width: 1000px;
     margin: 0 auto;
+
+    @media (max-width: 480px) {
+      gap: 1rem;
+    }
   }
 }
 
@@ -33,16 +41,40 @@
   &__icon {
     font-size: 2rem;
     margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+      font-size: 1.7rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.5rem;
+    }
   }
 
   h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: #3498db;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+    }
   }
 
   p {
     font-size: 0.95rem;
     color: #555;
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.85rem;
+    }
   }
 }

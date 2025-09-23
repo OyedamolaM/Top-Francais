@@ -1,0 +1,71 @@
+.stats {
+  padding: 4rem 2rem;
+  background: #f9fafb;
+  text-align: center;
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__card {
+    background: #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+
+    h3 {
+      font-size: 2rem;
+      color: #3498db;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+    }
+  }
+
+  &__cta {
+    margin-top: 2rem;
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 0.5rem 0 1.5rem;
+      background: #e67e22;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        background: #d35400;
+      }
+    }
+  }
+
+  &__rating {
+    font-size: 1.2rem;
+    color: #f39c12;
+
+    span {
+      margin-left: 0.5rem;
+      font-size: 0.95rem;
+      color: #333;
+    }
+  }
+}
