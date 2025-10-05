@@ -3,7 +3,7 @@ import "./Features.scss";
 export default function Features() {
   const features = [
     {
-      title: "Live Zoom Classes",
+      title: "Live Classes",
       desc: "Interactive lessons with native French tutors, not just pre-recorded videos.",
       icon: "🎥",
     },

@@ -4,29 +4,21 @@ import "./CourseSubscriptionPricing.scss";
 const CourseSubscriptionPricing = () => {
   const courses = [
     {
-      title: "Complete French Course",
+      title: "Our Learning Packagees",
       description:
         "Master French from beginner to advanced with structured lessons and practice exercises.",
       plans: [
-        { title: "Starter", price: "$29", features: ["Beginner lessons", "Community support", "Basic exercises"] },
-        { title: "Pro", price: "$59", features: ["Everything in Starter", "Intermediate & advanced lessons", "Weekly group practice"], highlight: true },
-        { title: "Premium", price: "$99", features: ["Everything in Pro", "1-on-1 coaching with tutor", "Exam preparation", "Priority support"] },
-      ],
-    },
-    {
-      title: "Subscription Packages",
-      description: "Flexible options for group or private classes.",
-      plans: [
-        { title: "Group Classes", price: "From $39/mo", features: ["1, 3, 6, 12 month plans", "Interactive group sessions", "Speaking challenges"] },
-        { title: "Private Classes", price: "From $79/mo", features: ["1–5 days per week", "Personalized schedule", "1-on-1 guidance"] },
+        { title: "Standard", features: ["Personal Accountability Coach","Bi-weekly Live Class","Speaking Community Access", "Assigned weekly speaking partner","100+ Free French Resources ", "Guaranteed Refund", "100+ Extra Learning materials"] },
+        { title: "Pro", features: ["Everything in Standard", "Personal 1-on-1 sessions per week", "1000+ pdf and recorded resources", "Monthly coaching sessions with Lead Tutor", "Structured lessens for DELF, DALF, TEF, TCF"], highlight: true },
+        { title: "Premium", features:["Everything in Pro", "Additional Coach for reading and speaking practice", "Exclusive access to Topfrancais Summer Bootcamp", "Monthly Coaching and Career Guide with the Lead Tutor"]  },
       ],
     },
     {
       title: "Specialized Courses",
       description: "Prepare for French exams with targeted learning paths.",
       plans: [
-        { title: "TCF/TEF Prep", price: "$149", features: ["Practice exams", "Exam strategies", "Speaking & writing drills"] },
-        { title: "DELF/DALF Prep", price: "$179", features: ["Advanced grammar focus", "Past papers", "Personalized feedback"] },
+        { title: "TCF/TEF Prep", features: ["Practice exams", "Exam strategies", "Speaking & writing drills"] },
+        { title: "DELF/DALF Prep", features: ["Advanced grammar focus", "Past papers", "Personalized feedback"] },
       ],
     },
   ];
@@ -53,7 +45,7 @@ const CourseSubscriptionPricing = () => {
                   className={`plan-card ${plan.highlight ? "highlight" : ""}`}
                 >
                   <h4>{plan.title}</h4>
-                  <p className="price">{plan.price}</p>
+                  {/* <p className="price">{plan.price} */}
                   <ul>
                     {plan.features.map((f, j) => (
                       <li key={j}>{f}</li>
