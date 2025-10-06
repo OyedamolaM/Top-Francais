@@ -10,25 +10,28 @@ export default function Navbar() {
 
   return (
     <header className="navbar">
-      {/* Logo */}
+      {/* Logo on the left */}
       <div className="navbar__logo">
-        <Link to="/" onClick={closeMenu}>TopFrancais</Link>
+        <Link to="/" onClick={closeMenu}>TopFrançais</Link>
       </div>
 
-      {/* Desktop Links */}
-      <nav className="navbar__links">
-        <Link to="/">Home</Link>
-        <Link to="/courses">Courses</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
+      {/* Desktop Links + CTA together */}
+      <div className="navbar__right">
+        <nav className="navbar__links">
+          <Link to="/">Home</Link>
+          <Link to="/resources">Resources</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+          <Link to="/testimonials">Testimonials</Link>
+        </nav>
 
-      {/* Desktop CTA */}
-      <div className="navbar__cta">
-        <Link to="/login" className="btn">Login</Link>
+        <div className="navbar__cta">
+          {/* scrolls to pricing section on homepage */}
+          <a href="#courses-pricing" className="btn wide">Get Started</a>
+        </div>
       </div>
 
-      {/* Hamburger */}
+      {/* Hamburger menu */}
       <button
         className={`navbar__toggle ${isOpen ? "open" : ""}`}
         onClick={toggleMenu}
@@ -49,10 +52,13 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <nav className={`navbar__mobile ${isOpen ? "active" : ""}`}>
         <Link to="/" onClick={closeMenu}>Home</Link>
-        <Link to="/courses" onClick={closeMenu}>Courses</Link>
+        <Link to="/resources" onClick={closeMenu}>Resources</Link>
         <Link to="/about" onClick={closeMenu}>About</Link>
         <Link to="/contact" onClick={closeMenu}>Contact</Link>
-        <Link to="/login" className="btn" onClick={closeMenu}>Login</Link>
+        <Link to="/testimonials" onClick={closeMenu}>Testimonials</Link>
+        <a href="#courses-pricing" className="btn wide" onClick={closeMenu}>
+          View Pricing
+        </a>
       </nav>
     </header>
   );

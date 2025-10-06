@@ -1,22 +1,41 @@
-import "./Stats.scss";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import "./Stats.scss";
 
 export default function Stats() {
   const stats = [
-    { number: "120M+", label: "People learn French daily" },
-    { number: "#1", label: "Most studied language in the world" },
-    { number: "77M+", label: "Native French speakers worldwide" },
+    { number: 120, suffix: "M+", label: "People learn French daily" },
+    { number: 1, prefix: "#", label: "Most studied language in the world" },
+    { number: 77, suffix: "M+", label: "Native French speakers worldwide" },
   ];
 
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  // Detect when stats section is visible
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="stats">
+    <section className="stats" ref={sectionRef}>
       <div className="stats__container">
         <div className="stats__grid">
           {stats.map((s, i) => (
-            <div key={i} className="stats__card">
-              <h3>{s.number}</h3>
-              <p>{s.label}</p>
-            </div>
+            <StatCard
+              key={i}
+              number={s.number}
+              label={s.label}
+              prefix={s.prefix}
+              suffix={s.suffix}
+              animate={visible}
+            />
           ))}
         </div>
 
@@ -32,5 +51,34 @@ export default function Stats() {
         </div>
       </div>
     </section>
+  );
+}
+
+function StatCard({ number, label, prefix = "", suffix = "", animate }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!animate) return;
+
+    let start = 0;
+    const duration = 1800;
+    const startTime = performance.now();
+
+    const update = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const value = Math.floor(progress * number);
+      setCount(value);
+      if (progress < 1) requestAnimationFrame(update);
+    };
+
+    requestAnimationFrame(update);
+  }, [animate, number]);
+
+  return (
+    <div className="stats__card">
+      <h3>{prefix}{count}{suffix}</h3>
+      <p>{label}</p>
+    </div>
   );
 }

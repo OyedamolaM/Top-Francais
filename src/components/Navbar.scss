@@ -9,70 +9,77 @@
   top: 0;
   z-index: 100;
 
+  // Logo
   &__logo a {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #2c3e50;
     text-decoration: none;
   }
 
-  /* Desktop Links */
+  /* Group links + CTA together */
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Desktop Links
   &__links {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
 
     a {
-      text-decoration: none;
       color: #2c3e50;
+      text-decoration: none;
       font-weight: 500;
-      transition: color 0.2s;
+      transition: color 0.3s ease;
 
       &:hover {
         color: #3498db;
       }
     }
-
-    @media (max-width: 768px) {
-      display: none;
-    }
   }
 
-  /* Desktop CTA */
+  // Desktop CTA
   &__cta {
     .btn {
       background: #3498db;
       color: #fff;
-      padding: 0.5rem 1.2rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 6px;
+      font-weight: 600;
       text-decoration: none;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
 
       &:hover {
         background: #2980b9;
       }
     }
-
-    @media (max-width: 768px) {
-      display: none;
-    }
   }
 
-  /* Hamburger */
+  // Hamburger Icon
   &__toggle {
     display: none;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
     cursor: pointer;
-    z-index: 103; // above backdrop & menu
     background: none;
     border: none;
+    z-index: 104;
 
     span {
       width: 25px;
       height: 3px;
       background: #2c3e50;
       border-radius: 2px;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     &.open span:nth-child(1) {
@@ -92,7 +99,7 @@
     }
   }
 
-  /* Backdrop */
+  // Backdrop
   &__backdrop {
     position: fixed;
     inset: 0;
@@ -108,28 +115,29 @@
     }
   }
 
-  /* Mobile Menu (Slide-in) */
+  // Mobile Menu
   &__mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 260px;
     background: #fff;
-    padding: 4rem 2rem;
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-    z-index: 103;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    z-index: 103;
 
     a {
+      font-size: 1.1rem;
       color: #2c3e50;
       text-decoration: none;
       font-weight: 500;
-      font-size: 1.1rem;
+      transition: color 0.3s ease;
 
       &:hover {
         color: #3498db;
@@ -143,6 +151,8 @@
       border-radius: 6px;
       text-align: center;
       font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
 
       &:hover {
         background: #2980b9;
