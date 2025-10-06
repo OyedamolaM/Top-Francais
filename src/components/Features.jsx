@@ -26,7 +26,7 @@ export default function Features() {
 
   return (
     <section className="features">
-      <h2 className="features__title">Why Choose TopFrancais?</h2>
+      <h2 className="features__title">What you would get with TopFrancais?</h2>
       <div className="features__grid">
         {features.map((f, index) => (
           <div key={index} className="feature-card">

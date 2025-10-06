@@ -11,9 +11,9 @@ export default function Bootcamp() {
         <p className="bootcamp__description animate">
           Don't miss out on our Summer Bootcamp! Join the training now and accelerate your French fluency.
         </p>
-        <span className="bootcamp__price animate">$199</span>
+        <span className="bootcamp__price animate">Coming Soon</span>
         <Link to="/courses" className="btn bootcamp__btn animate">
-          Join Now
+          Register Now
         </Link>
       </div>
     </section>

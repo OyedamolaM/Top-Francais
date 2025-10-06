@@ -22,13 +22,14 @@ export default function Home() {
       <Popup />
       <Navbar />
       <Hero />
+      <WhyChoose />
       <Features />
       <Stats />
       <WelcomeVideo />
       <CourseSubscriptionPricing/>
       <Testimonials />
       <Bootcamp />
-      <WhyChoose />
+      
       <Community />
       <Resources />
       <Newsletter />

@@ -56,25 +56,21 @@ export default function Testimonials() {
   const scrollRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // ✅ Scroll to the exact card position
   const scrollToCard = (index) => {
     const container = scrollRef.current;
     const cards = container.querySelectorAll(".testimonial-card");
     const target = cards[index];
     if (!target) return;
-
     const left =
       target.offsetLeft - (container.clientWidth - target.offsetWidth) / 2;
     container.scrollTo({ left, behavior: "smooth" });
   };
 
-  // ✅ Handle dot click
   const handleDotClick = (index) => {
     setActiveIndex(index);
     scrollToCard(index);
   };
 
-  // ✅ Auto slide every 20s
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => {
@@ -86,15 +82,12 @@ export default function Testimonials() {
     return () => clearInterval(interval);
   }, []);
 
-  // ✅ Sync active index on scroll
   useEffect(() => {
     const container = scrollRef.current;
     const cards = container.querySelectorAll(".testimonial-card");
-
     const handleScroll = () => {
       let closestIndex = 0;
       let minDistance = Infinity;
-
       cards.forEach((card, i) => {
         const distance = Math.abs(
           container.scrollLeft -
@@ -105,10 +98,8 @@ export default function Testimonials() {
           closestIndex = i;
         }
       });
-
       setActiveIndex(closestIndex);
     };
-
     container.addEventListener("scroll", handleScroll, { passive: true });
     return () => container.removeEventListener("scroll", handleScroll);
   }, []);
@@ -126,6 +117,7 @@ export default function Testimonials() {
             <div className="testimonial-card" key={t.id}>
               <div className="video-wrapper">
                 <video src={t.video} controls preload="metadata" />
+                <div className="blue-overlay"></div> {/* ✅ Added blue gradient */}
                 <div className="overlay">
                   <img src={t.logo} alt={t.name} className="logo-overlay" />
                   <span className="overlay-text">{t.name.split(" ")[0]}</span>
