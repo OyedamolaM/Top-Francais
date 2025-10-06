@@ -37,8 +37,8 @@ const Footer = () => {
         {/* Contact */}
         <div className="footer-contact">
           <h4>Contact Us</h4>
-          <p><strong>Email:</strong> support@topfrancais.com</p>
-          <p><strong>WhatsApp:</strong> +234 800 123 4567</p>
+          <p><strong>Email:</strong> admin@topfrancaisacademy.com</p>
+          <p><strong>WhatsApp:</strong> +234 705 121 0568</p>
           <p><strong>France Office:</strong> Paris, France</p>
           <p><strong>UK Office:</strong> London, UK</p>
           <p><a href="#partners">Partner with Us</a></p>

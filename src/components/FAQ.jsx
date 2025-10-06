@@ -4,24 +4,44 @@ import "./FAQ.scss";
 const FAQ = () => {
   const faqs = [
     {
-      question: "How long does it take to start speaking French?",
+      question: "Can I learn French even if I’ve never spoken a word before?",
       answer:
-        "Most of our students can introduce themselves and hold simple conversations within the first month of consistent learning.",
+        "Absolutely! Our lessons start from the very basics — pronunciation, greetings, and simple phrases — and build your confidence step by step.",
     },
     {
-      question: "Do I need any prior knowledge of French?",
+      question: "How soon will I be able to hold a simple conversation?",
       answer:
-        "Not at all! Our Starter plan is designed for complete beginners and builds up gradually.",
+        "Most learners can greet others, introduce themselves, and ask basic questions within 3–4 weeks of consistent study with our guided lessons.",
     },
     {
-      question: "Can I upgrade my plan later?",
+      question: "Do I need to live in a French-speaking country to learn effectively?",
       answer:
-        "Yes, you can upgrade at any time to access more lessons, group sessions, and 1-on-1 coaching.",
+        "Not at all. Our interactive exercises, audio resources, and practice sessions simulate real French environments — no travel required!",
     },
     {
-      question: "Is there a money-back guarantee?",
+      question: "What kind of support will I get during my learning journey?",
       answer:
-        "Absolutely. If you’re not satisfied within the first 14 days, we’ll refund your payment in full.",
+        "You’ll have access to instructors, live feedback sessions, and a supportive learner community to help you stay motivated and accountable.",
+    },
+    {
+      question: "Are your courses suitable for working professionals or students?",
+      answer:
+        "Yes! Our lessons are flexible and designed to fit into busy schedules. You can learn at your own pace, from anywhere, at any time.",
+    },
+    {
+      question: "Will I learn grammar or just conversational skills?",
+      answer:
+        "Both. We focus on speaking fluently while teaching grammar in a simple, practical way — so you understand it naturally as you learn to communicate.",
+    },
+    {
+      question: "Do you offer certificates after completing a course?",
+      answer:
+        "Yes, students receive an official Topfrançais certificate of completion once they finish their course and final assessment.",
+    },
+    {
+      question: "What if I’m not satisfied with the program?",
+      answer:
+        "We offer a 14-day money-back guarantee. If you’re not happy with your progress, you can request a full refund — no questions asked.",
     },
   ];
 
@@ -34,7 +54,9 @@ const FAQ = () => {
   return (
     <section className="faq" id="faq">
       <h2>Frequently Asked Questions</h2>
-      <p className="subtitle">Have questions? We’ve got answers.</p>
+      <p className="subtitle">
+        Find quick answers to the most common questions about learning French with us.
+      </p>
 
       <div className="faq-list">
         {faqs.map((faq, index) => (

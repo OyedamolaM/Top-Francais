@@ -19,7 +19,7 @@ export default function ContactUs() {
               Follow our updates, reels, and French learning tips on Instagram.
             </p>
             <a
-              href="https://instagram.com/topfrancais"
+              href="https://instagram.com/topfrancaisacademy"
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
@@ -34,7 +34,7 @@ export default function ContactUs() {
             <p>
               Send us an email for general inquiries, partnerships, or support.
             </p>
-            <a href="mailto:info@topfrancais.com" className="btn">
+            <a href="mailto:admin@topfrancaisacademy.com" className="btn">
               Send Email
             </a>
           </div>
@@ -46,7 +46,7 @@ export default function ContactUs() {
               Chat with us directly on WhatsApp for quick responses and support.
             </p>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/+2347051210568"
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
