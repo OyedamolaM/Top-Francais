@@ -18,8 +18,8 @@ const Footer = () => {
             <li><a href="#community">Join Our French Community</a></li>
             <li><a href="#social-classroom">Social Media Classroom</a></li>
             <li><a href="#videos">Latest Classroom Videos</a></li>
-            <li><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
-            <li><a href="https://youtube.com" target="_blank" rel="noreferrer">YouTube</a></li>
+            <li><a href="http://Instagram.com/topfrancais_" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li><a href="http://youtube.com?/@topfrancaisacademy" target="_blank" rel="noreferrer">YouTube</a></li>
           </ul>
         </div>
 
@@ -49,11 +49,12 @@ const Footer = () => {
         <div className="footer-socials">
           <h4>Follow Us</h4>
           <div className="icons">
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
+            <a href="http://Instagram.com/topfrancais_"><i className="fab fa-instagram"></i></a>
+            <a href="http://youtube.com?/@topfrancaisacademy"><i className="fab fa-youtube"></i></a>
             <a href="#"><i className="fab fa-facebook"></i></a>
             <a href="#"><i className="fab fa-twitter"></i></a>
             <a href="#"><i className="fab fa-linkedin"></i></a>
+            <a href="http://tiktok.com/@topfrancais"><i className="fab fa-linkedin"></i></a>
           </div>
         </div>
       </div>

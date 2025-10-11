@@ -3,6 +3,64 @@ import React from "react";
 import "./ContactUs.scss";
 
 export default function ContactUs() {
+  const contactMethods = [
+    {
+      title: "Instagram",
+      description:
+        "Follow our updates, short reels, and daily French learning tips on Instagram.",
+      link: "http://Instagram.com/topfrancais_",
+      buttonText: "Visit Instagram",
+      delay: "0s",
+    },
+    {
+      title: "Email",
+      description:
+        "Have a question, partnership idea, or need support? Send us an email anytime.",
+      link: "mailto:admin@topfrancaisacademy.com",
+      buttonText: "Send Email",
+      delay: "0.2s",
+    },
+    {
+      title: "WhatsApp",
+      description:
+        "Chat with our team directly for quick responses and personal assistance.",
+      link: "https://wa.me/2347051210568",
+      buttonText: "Message on WhatsApp",
+      delay: "0.4s",
+    },
+    {
+      title: "Our Offices",
+      description: (
+        <>
+          <p><strong>France:</strong> 12 Rue de Paris, Lyon</p>
+          <p><strong>UK:</strong> 45 Oxford Street, London</p>
+        </>
+      ),
+      isAddress: true,
+      delay: "0.6s",
+    },
+    {
+      title: "Partner with Us",
+      description:
+        "Collaborate with Topfrançais to bring the French language closer to more learners around the world.",
+      link: "/partner",
+      buttonText: "Become a Partner",
+      delay: "0.8s",
+    },
+    {
+      title: "Our Outreaches",
+      description: (
+        <>
+          Learn about our community programs like the{" "}
+          <strong>National French Bee</strong> and other educational initiatives.
+        </>
+      ),
+      link: "/outreach",
+      buttonText: "Learn More",
+      delay: "1s",
+    },
+  ];
+
   return (
     <section className="contact-us" id="contact">
       <div className="container">
@@ -12,75 +70,31 @@ export default function ContactUs() {
         </p>
 
         <div className="contact-grid">
-          {/* Instagram */}
-          <div className="contact-card fade-up">
-            <h3>Instagram</h3>
-            <p>
-              Follow our updates, reels, and French learning tips on Instagram.
-            </p>
-            <a
-              href="https://instagram.com/topfrancaisacademy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
+          {contactMethods.map((method, index) => (
+            <div
+              key={index}
+              className="contact-card fade-up"
+              style={{ animationDelay: method.delay }}
             >
-              Visit Instagram
-            </a>
-          </div>
+              <h3>{method.title}</h3>
+              <div className="contact-description">
+                {typeof method.description === "string"
+                  ? <p>{method.description}</p>
+                  : method.description}
+              </div>
 
-          {/* Email */}
-          <div className="contact-card fade-up" style={{ animationDelay: "0.2s" }}>
-            <h3>Email</h3>
-            <p>
-              Send us an email for general inquiries, partnerships, or support.
-            </p>
-            <a href="mailto:admin@topfrancaisacademy.com" className="btn">
-              Send Email
-            </a>
-          </div>
-
-          {/* WhatsApp */}
-          <div className="contact-card fade-up" style={{ animationDelay: "0.4s" }}>
-            <h3>WhatsApp</h3>
-            <p>
-              Chat with us directly on WhatsApp for quick responses and support.
-            </p>
-            <a
-              href="https://wa.me/+2347051210568"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
-            >
-              Message on WhatsApp
-            </a>
-          </div>
-
-          {/* Addresses */}
-          <div className="contact-card fade-up" style={{ animationDelay: "0.6s" }}>
-            <h3>Our Offices</h3>
-            <p><strong>France:</strong> 12 Rue de Paris, Lyon</p>
-            <p><strong>UK:</strong> 45 Oxford Street, London</p>
-          </div>
-
-          {/* Partner With Us */}
-          <div className="contact-card fade-up" style={{ animationDelay: "0.8s" }}>
-            <h3>Partner with Us</h3>
-            <p>
-              Collaborate with Topfrançais to spread the French language
-              worldwide.
-            </p>
-            <a href="/partner" className="btn">Become a Partner</a>
-          </div>
-
-          {/* Outreach */}
-          <div className="contact-card fade-up" style={{ animationDelay: "1s" }}>
-            <h3>Our Outreaches</h3>
-            <p>
-              Learn about our outreach programs like the{" "}
-              <strong>National French Bee</strong> and other initiatives.
-            </p>
-            <a href="/outreach" className="btn">Learn More</a>
-          </div>
+              {!method.isAddress && method.link && (
+                <a
+                  href={method.link}
+                  target={method.link.startsWith("http") ? "_blank" : "_self"}
+                  rel="noopener noreferrer"
+                  className="btn"
+                >
+                  {method.buttonText}
+                </a>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
