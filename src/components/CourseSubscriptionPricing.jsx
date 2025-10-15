@@ -4,7 +4,7 @@ import "./CourseSubscriptionPricing.scss";
 const CourseSubscriptionPricing = () => {
   const courses = [
     {
-      title: "Our Learning Packagees",
+      title: "Our Learning Packages",
       description:
         "Master French from beginner to advanced with structured lessons and practice exercises.",
       plans: [

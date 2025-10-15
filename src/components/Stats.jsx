@@ -4,9 +4,9 @@ import "./Stats.scss";
 
 export default function Stats() {
   const stats = [
-    { number: 120, suffix: "M+", label: "People learn French daily" },
-    { number: 1, prefix: "#", label: "Most studied language in the world" },
-    { number: 77, suffix: "M+", label: "Native French speakers worldwide" },
+    { number: 1, prefix: "#", label: "Online French Academy" },
+    { number: 1000, suffix: "+", label: "Students Enrolled" },
+    { number: 5000, suffix: "+", label: "Students impacted worldwide" },
   ];
 
   const [visible, setVisible] = useState(false);
@@ -60,7 +60,7 @@ function StatCard({ number, label, prefix = "", suffix = "", animate }) {
   useEffect(() => {
     if (!animate) return;
 
-    let start = 0;
+    // let start = 0;
     const duration = 1800;
     const startTime = performance.now();
 

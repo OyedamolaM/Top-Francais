@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import Resources from "./components/Resources";
 
 export default function App() {
   return (
@@ -18,6 +19,8 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/resources" element={<Resources />} />
+
       </Routes>
     </Router>
     <SpeedInsights />

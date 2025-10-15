@@ -12,15 +12,6 @@ export default function Resources() {
         </p>
 
         <div className="resources-grid">
-          {/* Blog */}
-          <div className="resource-card fade-up">
-            <h3>Topfrançais Blog</h3>
-            <p>
-              Read expert tips, study hacks, and motivational articles to
-              supercharge your French journey.
-            </p>
-            <a href="/blog" className="btn">Read Blog</a>
-          </div>
 
           {/* 1000 Verbs PDF */}
           <div
@@ -33,7 +24,7 @@ export default function Resources() {
               to practice daily.
             </p>
             <a href="/pdf/1000-verbs.pdf" className="btn" download>
-              Download PDF
+              Download PDF for free
             </a>
           </div>
 
@@ -44,11 +35,11 @@ export default function Resources() {
           >
             <h3>Exam Preparation</h3>
             <p>
-              Prepare effectively for <strong>TCF/TEF</strong> and{" "}
+              Get past questions to prepare effectively for <strong>TCF/TEF</strong> and{" "}
               <strong>DELF/DAF</strong> exams with structured materials and
               practice sets.
             </p>
-            <a href="/exam-prep" className="btn">Start Preparation</a>
+            <a href="/exam-prep" className="btn">Buy Past Questions</a>
           </div>
 
           {/* Daily Podcast */}
@@ -62,6 +53,17 @@ export default function Resources() {
               listening practice.
             </p>
             <a href="/podcast" className="btn">Listen Now</a>
+          </div>
+          {/* Prerecorded classes */}
+          <div
+            className="resource-card fade-up"
+            style={{ animationDelay: "0.6s" }}
+          >
+            <h3>Topfrançais Courses</h3>
+            <p>
+              Pre-recorded tutorial Classes and certifications for your french journey
+            </p>
+            <a href="/Courses" className="btn">Buy</a>
           </div>
         </div>
       </div>
