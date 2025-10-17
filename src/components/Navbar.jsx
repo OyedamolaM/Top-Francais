@@ -12,7 +12,7 @@ export default function Navbar() {
     <header className="navbar">
       {/* Logo on the left */}
       <div className="navbar__logo">
-        <Link to="/" onClick={closeMenu}>TopFrançais</Link>
+        <Link to="/" onClick={closeMenu}>TopFrançais Academy</Link>
       </div>
 
       {/* Desktop Links + CTA together */}
