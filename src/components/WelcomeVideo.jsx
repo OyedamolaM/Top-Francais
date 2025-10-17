@@ -12,13 +12,15 @@ export default function WelcomeVideo() {
 
         <div className="video-wrapper">
           <iframe
-            src="https://youtube.com/embed/es6LjyWZmZI?si=qNOFa1Kl_WegLZXi" // 👈 replace this link
+            src="https://www.youtube.com/embed/es6LjyWZmZI?rel=0&loop=1&playlist=es6LjyWZmZI"
             title="Welcome to Topfrançais"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
+
+
       </div>
     </section>
   );
