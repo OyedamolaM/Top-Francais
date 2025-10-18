@@ -6,7 +6,7 @@ export default function Stats() {
   const stats = [
     { number: 1, prefix: "#", label: "Online French Academy" },
     { number: 1000, suffix: "+", label: "Students Enrolled" },
-    { number: 5000, suffix: "+", label: "Students impacted worldwide" },
+    { number: 18000, suffix: "+", label: "Learners impacted worldwide" },
   ];
 
   const [visible, setVisible] = useState(false);

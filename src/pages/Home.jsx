@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
-import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import Popup from "../components/PopUp";
@@ -22,9 +21,8 @@ export default function Home() {
       <Popup />
       <Navbar />
       <Hero />
-      <WhyChoose />
-      <Features />
       <Stats />
+      <WhyChoose />
       <WelcomeVideo />
       <CourseSubscriptionPricing/>
       <Testimonials />
