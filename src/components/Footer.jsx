@@ -37,7 +37,15 @@ const Footer = () => {
         {/* Contact */}
         <div className="footer-contact">
           <h4>Contact Us</h4>
-          <p><strong>Email:</strong> admin@topfrancaisacademy.com</p>
+          <p>
+            <strong>Email:</strong><br />
+            <a href="mailto:admin@topfrancaisacademy.com"
+              target="_blank"
+              rel="noopener noreferrer">
+               admin@topfrancaisacademy.com
+            </a>
+          </p>
+
           <p><strong>WhatsApp:</strong> +234 705 121 0568</p>
           <p><strong>France Office:</strong><br />20 Rue Troyon Sevres, 93316, France</p>
           <p><strong>UK Office:</strong><br />Rowlandson House 289-293 Ballards Lane. London, N12 8NP England</p>

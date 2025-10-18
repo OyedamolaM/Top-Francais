@@ -41,6 +41,10 @@
     opacity: 0;
     animation: fadeUp 0.9s ease forwards;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* keep button at bottom */
+
     &:hover {
       transform: translateY(-6px);
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
@@ -52,18 +56,18 @@
       margin-bottom: 0.8rem;
     }
 
-    p {
-      color: #444;
-      line-height: 1.7;
-      font-size: 0.98rem;
-      margin-bottom: 1.6rem;
+    .contact-description {
+      flex: 1;
+      p {
+        color: #444;
+        line-height: 1.7;
+        font-size: 0.98rem;
+        margin-bottom: 1.6rem;
+      }
     }
 
     a.btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
+      align-self: flex-start;
       background: #1e3a8a;
       color: #fff;
       font-weight: 600;
@@ -71,6 +75,11 @@
       border-radius: 8px;
       text-decoration: none;
       transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: auto; /* ensures it's always at bottom */
 
       &:hover {
         background: #2a4fcf;
@@ -100,13 +109,17 @@
 
     .contact-card {
       text-align: center;
+      align-items: center;
 
-      p {
-        text-align: center;
+      .contact-description {
+        p {
+          text-align: center;
+        }
       }
 
       a.btn {
         width: 100%;
+        align-self: center;
       }
     }
   }

@@ -32,8 +32,8 @@ export default function ContactUs() {
       title: "Our Offices",
       description: (
         <>
-          <p><strong>France:</strong> 12 Rue de Paris, Lyon</p>
-          <p><strong>UK:</strong> 45 Oxford Street, London</p>
+          <p><strong>France:</strong> 20 Rue Troyon Sevres, 93316, France</p>
+          <p><strong>UK:</strong> Rowlandson House 289-293 Ballards Lane. London, N12 8NP England</p>
         </>
       ),
       isAddress: true,
@@ -43,7 +43,7 @@ export default function ContactUs() {
       title: "Partner with Us",
       description:
         "Collaborate with Topfrançais to bring the French language closer to more learners around the world.",
-      link: "/partner",
+      link: "/",
       buttonText: "Become a Partner",
       delay: "0.8s",
     },
@@ -55,7 +55,7 @@ export default function ContactUs() {
           <strong>National French Bee</strong> and other educational initiatives.
         </>
       ),
-      link: "/outreach",
+      link: "/",
       buttonText: "Learn More",
       delay: "1s",
     },
@@ -83,16 +83,24 @@ export default function ContactUs() {
                   : method.description}
               </div>
 
-              {!method.isAddress && method.link && (
-                <a
-                  href={method.link}
-                  target={method.link.startsWith("http") ? "_blank" : "_self"}
-                  rel="noopener noreferrer"
-                  className="btn"
-                >
-                  {method.buttonText}
-                </a>
-              )}
+              {method.link && (
+        <a
+          href={method.link}
+          target={
+            method.link.startsWith("http") || method.link.startsWith("mailto:")
+              ? "_blank"
+              : "_self"
+          }
+          rel="noopener noreferrer"
+          className="btn"
+        >
+          {method.buttonText}
+        </a>
+)}
+
+
+
+
             </div>
           ))}
         </div>

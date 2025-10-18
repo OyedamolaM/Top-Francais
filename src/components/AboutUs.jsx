@@ -4,7 +4,7 @@ import "./AboutUs.scss";
 
 export default function AboutUs() {
   return (
-    <section className="about-us" id="about-us">
+    <section className="about-us" id="about">
       <div className="container">
 
         {/* Hero Title */}
