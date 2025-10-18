@@ -24,13 +24,13 @@ const Footer = () => {
         </div>
 
         {/* Resources */}
-        <div className="footer-links">
+        <div className="footer-links" >
           <h4>Resources</h4>
           <ul>
             <li><a href="#blog">Topfrançais Blog</a></li>
-            <li><a href="#verbs">1000 Verbs PDF</a></li>
-            <li><a href="#exams">Exam Preparation (TCF/TEF, DELF/DAF)</a></li>
-            <li><a href="#podcast">Daily Podcast</a></li>
+            <li><a href="#resources">1000 Verbs PDF</a></li>
+            <li><a href="#resources">Exam Preparation (TCF/TEF, DELF/DAF)</a></li>
+            <li><a href="#resources">Daily Podcast</a></li>
           </ul>
         </div>
 
@@ -39,8 +39,8 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <p><strong>Email:</strong> admin@topfrancaisacademy.com</p>
           <p><strong>WhatsApp:</strong> +234 705 121 0568</p>
-          <p><strong>France Office:</strong> Paris, France</p>
-          <p><strong>UK Office:</strong> London, UK</p>
+          <p><strong>France Office:</strong><br />20 Rue Troyon Sevres, 93316, France</p>
+          <p><strong>UK Office:</strong><br />Rowlandson House 289-293 Ballards Lane. London, N12 8NP England</p>
           <p><a href="#partners">Partner with Us</a></p>
           <p><a href="#outreach">Our Outreaches</a></p>
         </div>
